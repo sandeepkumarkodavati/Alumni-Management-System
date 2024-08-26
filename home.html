@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni</title>
+    <style>
+        .content-section {
+            background-size: cover;
+            background-position: center;
+            height: 1090px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            background-image: url('VVIT.jpeg');
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #f58442;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        #header h1 {
+            margin: 0;
+            font-size: 80px;
+        }
+
+        #logo {
+            width: 170px;
+            height: 120px;
+            background-image: url('logo.png');
+            background-size: cover;
+        }
+
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            text-align: left;
+            background-image: url('ntg.jpg');
+        }
+
+        .nav-dropdown-content a {
+            padding: 10px;
+            display: block;
+            color: #333;
+            font-size: 24px;
+            text-decoration: none;
+            background-color: #f58442;
+            color: #fff;
+            background-image: url('ntg.jpg');
+        }
+
+        .nav-dropdown:hover .nav-dropdown-content {
+            display: block;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 150px;
+            left: 0;
+            right: 0;
+            background-color: #03dffc;
+            padding: 20px 0;
+            display: flex;
+            justify-content: flex-end;
+            z-index: 100;
+        }
+
+        .navbar .nav-dropdown {
+            margin-left: 0px;
+            margin-right: 20px;
+        }
+
+        .login-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .center-division a:link {
+            color: white;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .center-division a:visited {
+            color: blue;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        .center-division a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        .center-division a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 20px 0;
+            color: #fff;
+        }
+
+        .left-division {
+            margin-left: 30px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .center-division {
+            text-align: center;
+            margin-right: 10px;
+            font-size: larger;
+        }
+
+        .center-division a {
+            margin: 0 10px;
+        }
+
+        .tooltip-message {
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 15px 20px;
+            border-radius: 10px;
+            z-index: 200;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .tooltip-message::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="logo"></div>
+        <h1>Alumni</h1>
+        <button class="login-button" id="login-button" onclick="openLoginForm()">Login</button>
+    </header>
+
+    <div class="navbar">
+        <div class="nav-dropdown">
+            <span>About</span>
+            <div class="nav-dropdown-content" onclick="showLoginMessage(event)">
+                <a href="alumnidata.html">Alumni</a>
+                <a href="opportunities.html">Opportunities</a>
+                <a href="boardmembers.html">Board Members</a>
+                <a href="News.jsp">NEWS</a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <span>Gallery</span>
+            <div class="nav-dropdown-content" onclick="showLoginMessage(event)">
+                <a href="images.html">Photos</a>
+                <a href="videos.html">Videos</a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <span>Assist</span>
+            <div class="nav-dropdown-content" onclick="showLoginMessage(event)">
+                <a href="query.html">Send a query</a>
+                <a href="feedbackform.html">Feedback</a>
+                <a href="https://instagram.com/alumni_vvit?igshid=MzRlODBiNWFlZA==" target="_blank">Instagram page</a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <span>Giveback</span>
+            <div class="nav-dropdown-content" onclick="showLoginMessage(event)">
+                <a href="volunteer.html">Volunteer</a>
+                <a href="mentor.html">Be a mentor</a>
+                <a href="opportunities.html">Share opportunities</a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <span>More</span>
+            <div class="nav-dropdown-content" onclick="showLoginMessage(event)">
+                <a href="contact.html">Contact us</a>
+                <a href="community.html">Join a community</a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <span></span>
+        </div>
+        <div class="nav-dropdown">
+            <span></span>
+        </div>
+        <div class="nav-dropdown">
+            <span></span>
+        </div>
+        <div class="nav-dropdown">
+            <span></span>
+        </div>
+        <div class="nav-dropdown">
+            <span></span>
+        </div>
+    </div>
+    <div class="content-section">
+        <div id="login-form-container"></div>
+    </div>
+    <footer>
+        <div class="left-division">
+            <p>ADDRESS<br>
+                Vasireddy Venkatadri Institute of Technology<br>
+                Nambur (V)<br>
+                Peda Kakani (Md)<br>
+                Guntur (Dt)<br>
+                Andhra Pradesh<br>
+                522508
+            </p>
+            <br>
+            <p>CONTACT<br>
+                9951 023 336<br>
+                9849 542 336<br>
+                9849 549 336<br>
+            </p>
+        </div>
+        <br>
+        <div class="center-division clear">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="https://instagram.com/alumni_vvit?igshid=MzRlODBiNWFlZA==" target="_blank">
+                <img src="instalogo.jpg" alt="alumni-instagram" width="50px" height="50px">
+            </a>
+        </div>
+    </footer>
+
+    <div id="login-message" class="tooltip-message">Please login to access this content</div>
+
+    <script>
+        let isLoggedIn = false; // Change this to manage the login state
+
+        function openLoginForm() {
+            var container = document.getElementById("login-form-container");
+            var body = document.body;
+            var existingIframe = container.querySelector("iframe");
+
+            if (existingIframe) {
+                container.removeChild(existingIframe);
+                body.style.overflow = "auto";
+            } else {
+                var iframe = document.createElement("iframe");
+                iframe.src = "login.jsp";
+                iframe.style.width = "40%";
+                iframe.style.height = "470px";
+                iframe.style.position = "absolute";
+                iframe.style.top = "50%";
+                iframe.style.left = "50%";
+                iframe.style.transform = "translate(-50%, -50%)";
+
+                container.appendChild(iframe);
+                body.style.overflow = "hidden";
+            }
+        }
+
+        function replaceLoginWithProfile() {
+            window.location.href = "home1.html";
+        }
+
+        function openProfileForm() {
+            var container = document.getElementById("login-form-container");
+            var body = document.body;
+            var existingIframe = container.querySelector("iframe");
+
+            if (existingIframe) {
+                container.removeChild(existingIframe);
+                body.style.overflow = "auto";
+            }
+
+            var iframe = document.createElement("iframe");
+            iframe.src = "profile.jsp";
+            iframe.style.width = "40%";
+            iframe.style.height = "470px";
+            iframe.style.position = "absolute";
+            iframe.style.top = "50%";
+            iframe.style.left = "50%";
+            iframe.style.transform = "translate(-50%, -50%)";
+
+            container.appendChild(iframe);
+            body.style.overflow = "hidden";
+        }
+
+        function showLoginMessage(event) {
+            if (!isLoggedIn) {
+                event.preventDefault();
+                const loginMessage = document.getElementById("login-message");
+                const rect = event.target.getBoundingClientRect();
+
+                loginMessage.style.top = `${rect.top + window.scrollY - loginMessage.offsetHeight - 10}px`;
+                loginMessage.style.left = `${rect.left + window.scrollX + rect.width / 2 - loginMessage.offsetWidth / 2}px`;
+                loginMessage.style.display = "block";
+
+                setTimeout(() => {
+                    loginMessage.style.display = "none";
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>

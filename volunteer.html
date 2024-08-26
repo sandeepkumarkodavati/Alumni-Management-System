@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Volunteer Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e5f9e0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #d8f5f6;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 7px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 150px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            display: none;
+            background-color: #5cb85c;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Alumni Volunteer Form</h1>
+        <form action="#" method="post" id="volunteerForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="interests">Volunteering Interests:</label>
+            <textarea id="interests" name="interests" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+        <div id="successMessage" class="success-message">Thank you for volunteering! We'll be in touch soon.</div>
+    </div>
+
+    <script>
+        const volunteerForm = document.getElementById("volunteerForm");
+        const successMessage = document.getElementById("successMessage");
+
+        volunteerForm.addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent the form from submitting normally
+
+            // You can add your form submission logic here
+            // For now, we'll just display the success message
+            successMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>
+
+

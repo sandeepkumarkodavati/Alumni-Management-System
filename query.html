@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alumni Query Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b4feff;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fcace4;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 7px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #90c2f7;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styles for the success message */
+        #successMessage {
+            display: none;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alumni Query Form</h1>
+    <p>Have a question or need assistance? Feel free to reach out to us.</p>
+    
+    <form id="queryForm" action="submit_query.php" method="post">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="graduation_year">Graduation Year:</label>
+        <input type="text" id="graduation_year" name="graduation_year" required><br><br>
+
+        <label for="query">Your Query:</label><br>
+        <textarea id="query" name="query" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="successMessage">
+        <p>Thank you for your submission. Your query has been received!</p>
+    </div>
+
+    <script>
+        document.getElementById("queryForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            // You can add your form submission logic here (e.g., using AJAX to submit data to the server).
+
+            // For demonstration purposes, we'll just show a success message.
+            document.getElementById("queryForm").style.display = "none";
+            document.getElementById("successMessage").style.display = "block";
+        });
+    </script>
+</body>
+</html>
+

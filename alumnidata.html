@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ALUMNI</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fff; /* Initial background color */
+            background-image: url("Alumni1.jpg"); /* Initial background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background 0.5s ease; /* Smooth transition for background change */
+            top:10px;
+        }
+
+        header {
+            background-color: #EF6C00; /* Orange background color */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 100px; /* Adjusted to move it down from the fixed header */
+            z-index: 1000; /* Ensure the navigation bar is above other content */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: #ef2c34;
+        }
+
+        .container {
+            text-align: center;
+            color: #333;
+            margin-top: 100px; /* Adjusted to make space for the fixed header and navigation bar */
+            padding-top: 20px; /* Adjusted to add space between nav bar and content */
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 130px); /* Adjusted height to fit the iframe below the header and nav */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yearwise Data of Alumni</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="loadData('2014')">2014</a>
+        <a href="#" onclick="loadData('2015')">2015</a>
+        <a href="#" onclick="loadData('2017')">2017</a>
+        <a href="#" onclick="loadData('2019')">2019</a>
+        <a href="#" onclick="loadData('2020')">2020</a>
+        <a href="#" onclick="loadData('2021')">2021</a>
+        <a href="#" onclick="loadData('2022')">2022</a>
+    </nav>
+
+    <div class="container" id="pageContent">
+        <!-- Removed the welcome message and paragraph -->
+    </div>
+
+    <iframe id="iframe" src="" frameborder="0"></iframe>
+
+    <script>
+        function loadData(year) {
+            // Construct the path to the JSP file based on the selected year
+            var jspFile = year + ".jsp";
+            // Update iframe source
+            document.getElementById("iframe").src = jspFile;
+            
+            // Change body background to plain white when loading JSP file
+            document.body.style.backgroundColor = '#fff';
+            document.body.style.backgroundImage = 'none';
+        }
+    </script>
+</body>
+</html>

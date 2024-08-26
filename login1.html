@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #E6E6FA;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 7px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            font-size: 14px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Success message styles */
+        #success-message {
+            display: none;
+            background-color: #45a049;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 3px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showSuccessMessage() {
+            var successMessage = document.getElementById("success-message");
+            successMessage.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h2>Login</h2>
+    <form onsubmit="showSuccessMessage()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <input type="radio" id="usertype" name="usertype" value="Alumni"> Alumni
+        <input type="radio" d="usertype" name="usertype" value="Student"> Student
+        <input type="radio" id="usertype" name="usertype" value="Admin">Admin<br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <!-- Success message (initially hidden) -->
+    <div id="success-message">
+        <p>Login successful! You are now logged in.</p>
+    </div>
+
+    <!-- Footer with registration link -->
+    <div class="footer">
+        <p>If not registered, <a href="register.html">click here</a> to register.</p>
+    </div>
+</body>
+</html>
+
+
+
+

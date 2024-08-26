@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alumni Mentor Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #deff9d;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        form {
+            background-color: #fac482;
+            border-radius: 10px;
+            padding: 20px;
+            width: 40%;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 7px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alumni Mentor Application Form</h1>
+    <p>Please fill out the following information to apply as a mentor for our college:</p>
+    
+    <form action="mentor_application_process.php" method="post">
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="batch">Year of Graduation:</label>
+        <select id="batch" name="batch" required>
+            <option value="">Select Year</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+        </select><br><br>
+
+        <label for="current_job">Current Job:</label>
+        <input type="text" id="current_job" name="current_job"><br><br>
+
+        <label for="mentoring_experience">Mentoring Experience:</label>
+        <textarea id="mentoring_experience" name="mentoring_experience" rows="4" cols="50"></textarea><br><br>
+
+        <label for="areas_of_expertise">Areas of Expertise:</label>
+        <input type="text" id="areas_of_expertise" name="areas_of_expertise"><br><br>
+
+        <label for="availability">Availability for Mentoring:</label>
+        <input type="text" id="availability" name="availability"><br><br>
+
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <style>
+        /* Your CSS styles */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #E6E6FA;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 7px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="radio"] {
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer p {
+            font-size: 14px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="login.jsp" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="usertype">User Type:</label>
+        <input type="radio" id="alumni" name="usertype" value="Alumni"> Alumni
+        <input type="radio" id="student" name="usertype" value="Student"> Student
+        <input type="radio" id="admin" name="usertype" value="Admin"> Admin<br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+    <!-- Footer with registration link -->
+    <div class="footer">
+        <p>If not registered, <a href="register.html">click here</a> to register.</p>
+    </div>
+</body>
+</html>
